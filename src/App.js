@@ -97,10 +97,8 @@ function App() {
           {
             Header: "Profile Progress",
             accessor: "progress",
-            Cell: (cellProps) => {
-              let valor = cellProps.value;
-              let row = cellProps.row.index;
-              let column = cellProps.column.id;
+            Cell: ({value , row , column}) => {
+
               const [value, setValue] = React.useState(valor);
 
               const onChange = (e) => {
@@ -108,7 +106,7 @@ function App() {
               };
 
               const onBlur = () => {
-                updateMyData(row, column, value);
+                updateMyData(row.index, column.id, value);
               };
 
               React.useEffect(() => {

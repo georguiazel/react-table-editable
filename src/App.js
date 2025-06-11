@@ -97,25 +97,26 @@ function App() {
           {
             Header: "Profile Progress",
             accessor: "progress",
-            Cell: ({value , row , column}) => {
+          Cell: ({ value: initialValue, row, column }) => {
+          const [value, setValue] = React.useState(initialValue);
 
-              const [value, setValue] = React.useState(valor);
+          const onChange = (e) => {
+            setValue(e.target.value);
+          };
 
-              const onChange = (e) => {
-                setValue(e.target.value);
-              };
+          const onBlur = () => {
+            updateMyData(row.index, column.id, value);
+          };
 
-              const onBlur = () => {
-                updateMyData(row.index, column.id, value);
-              };
+          React.useEffect(() => {
+            setValue(initialValue);
+          }, [initialValue]);
 
-              React.useEffect(() => {
-                setValue(valor);
-              }, [valor]);
-              return (
-                <input value={value} onChange={onChange} onBlur={onBlur} />
-              );
-            }
+          return (
+            <input value={value} onChange={onChange} onBlur={onBlur} />
+          );
+        }
+
           }
         ]
       }

@@ -37,5 +37,10 @@
   "name": "react-table-dynamic-editable",
   "version": "1.0.0",
   "author": "georguiazel",
-  "description": "A React editable table component"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/georguiazel/react-table-editable"
+  },
+  "description": "A React editable table dynamic component"
 }

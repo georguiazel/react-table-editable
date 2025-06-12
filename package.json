@@ -34,6 +34,8 @@
     ]
   },
   "keywords": [],
-  "name": "react-editable-table",
+  "name": "react-table-dynamic-editable",
+  "version": "1.0.0",
+  "author": "georguiazel",
   "description": "A React editable table component"
 }

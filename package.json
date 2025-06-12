@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "rescripts start",
     "build": "rescripts build",
